@@ -1,6 +1,7 @@
 {
   "name": "ng-wishlist",
-  "version": "0.0.0",
+  "homepage": "https://raquelgarciat.github.io/ng_wishlist",
+  "version": "0.1.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
