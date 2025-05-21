@@ -1,0 +1,8 @@
+@if (access) {
+<app-items></app-items>
+<button (click)="access = false">Volver a inicio</button>
+} @else {
+<p>¡Bienvenido!</p>
+<p>Pulsa el botón para acceder a la lista ↓</p>
+<button (click)="access = true">Acceder</button>
+}
