@@ -7,7 +7,8 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "github-build": "ng build --configuration production --base-href 'https://raquelgarciat.github.io/ng_wishlist/'"
+    "github-build": "ng build --configuration production --base-href 'https://raquelgarciat.github.io/ng_wishlist/'",
+    "github-deploy": "npx angular-cli-ghpages --dir=dist/ng_wishlist/browser --no-silent"
   },
   "private": true,
   "dependencies": {
