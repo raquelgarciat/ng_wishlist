@@ -13,9 +13,10 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/ng_wishlist",
+            "outputPath": "dist/ng_wishlist/",
             "index": "src/index.html",
             "browser": "src/main.ts",
+            "baseHref": "/ng_wishlist/",
             "polyfills": [
               "zone.js"
             ],

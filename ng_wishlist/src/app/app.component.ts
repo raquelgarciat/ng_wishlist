@@ -43,3 +43,5 @@ export class AppComponent {
     );
   }
 }
+
+// ng run ng_wishlist:deploy
