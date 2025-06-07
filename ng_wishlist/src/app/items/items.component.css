@@ -1,13 +1,91 @@
+/* Estilo del filtro de categorías */
+.category-filter,
+.country-filter {
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 10px;
+  margin-top: 10px;
+}
+
+.category-filter-label,
+.country-filter-label {
+  margin-right: 10px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-color);
+}
+
+/* Contenedor para el icono y el select */
+.filter-wrapper {
+  display: flex;
+  align-items: center;
+  position: relative;
+  gap: 10px;
+}
+
+/* Ícono de filtro */
+.filter-wrapper i {
+  font-size: 14px;
+  color: var(--select-focus-border); /* Color del icono */
+  transition: color 0.3s ease;
+  position: absolute;
+  left: 12px;
+  pointer-events: none; /* El icono no interfiere con la interacción del select */
+  z-index: 1; /* Aseguramos que el icono esté por encima del select */
+}
+
+/* Estilo para el select */
+.category-filter select,
+.country-filter select {
+  padding: 2px 16px;
+  font-size: 12px;
+  font-weight: 400;
+  border-radius: 8px;
+  border: 2px solid var(--select-border);
+  background-color: var(--select-bg);
+  color: var(--text-color);
+  appearance: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding-left: 35px; /* Espacio para el icono */
+  font-family: inherit; /* Asegurarse de que la fuente sea consistente */
+}
+
+/* Estilo cuando el select tiene focus */
+.category-filter select:focus,
+.country-filter select:focus {
+  border-color: var(--select-focus-border);
+  outline: none;
+  box-shadow: 0 0 8px rgba(167, 57, 77, 0.3);
+  background-color: var(--select-hover-bg);
+}
+
+/* Estilo del select en hover */
+.category-filter select:hover,
+.country-filter select:hover {
+  border-color: var(--select-focus-border);
+  background-color: var(--select-hover-bg);
+}
+
+/* Estilo cuando se pasa el cursor sobre las opciones */
+.category-filter option:hover,
+.country-filter option:hover {
+  background-color: #f4f4f4;
+}
+
+/* Contenedor de la lista de artículos */
 ul {
   display: flex;
   flex-wrap: wrap;
-  list-style: none;
   gap: 14px;
-  align-items: center;
   justify-content: center;
-  padding: 20px 40px;
+  padding: 20px;
+  margin: 0 auto;
 }
 
+/* Estilo de cada tarjeta (artículo) */
 li {
   padding: 20px;
   border-radius: 10px;
@@ -17,8 +95,16 @@ li {
   align-items: flex-start;
   justify-content: center;
   width: 280px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+li:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo para la parte superior de la tarjeta (con el país y la categoría) */
 .item_top {
   display: flex;
   width: 100%;
@@ -34,32 +120,117 @@ li {
 
 .item_category {
   font-size: 12px;
+  color: var(--text-color);
   text-decoration: none;
+  font-weight: 500;
+  display: flex;
+  gap: 4px;
 }
 
+.category-link {
+  cursor: pointer;
+}
+
+.category-link:hover {
+  cursor: pointer;
+  color: #a7394d;
+}
+
+/* Imagen del artículo */
 .item_img {
-  height: 100px;
+  height: 180px;
   width: 100%;
   align-self: center;
   border-radius: 10px;
   background-position: center;
   background-size: cover;
+  margin-bottom: 15px;
+  transition: transform 0.3s ease;
 }
 
+.item_img:hover {
+  transform: scale(1.05);
+}
+
+/* Nombre del artículo */
+.item_name {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-color);
+  margin-bottom: 10px;
+}
+
+.item_desc {
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--text-color);
+  margin-bottom: 10px;
+}
+
+/* Parte inferior de la tarjeta (con el precio y el botón de compra) */
 .item_bottom {
   display: flex;
   width: 100%;
   justify-content: space-between;
   align-items: center;
+  gap: 10px; /* Añadido espacio entre precio y botón */
+  margin-top: 10px;
 }
 
+.item_price {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-color);
+  margin-right: 10px; /* Espacio adicional entre el precio y el botón */
+}
+
+/* Estilo del botón de compra */
 .item_btn {
-  padding: 4px 6px;
-  margin: 5px;
-  border-radius: 4px;
+  padding: 6px 4px; /* Reducido tamaño del botón */
+  border-radius: 6px;
   cursor: pointer;
   background-color: #a7394d;
-  color: var(--button-text);
+  color: #d4d4d4;
   text-decoration: none;
-  align-self: flex-end;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 500;
+  text-align: center;
+  transition: all 0.3s ease; /* Transición suave para todos los cambios */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra inicial */
+  width: auto; /* Ajustado para que el botón no ocupe todo el ancho */
+  min-width: 120px; /* Asegurar que el botón tenga un tamaño mínimo */
+  justify-content: center; /* Centrar el texto y el icono */
+  font-size: 14px;
+}
+
+/* Efecto hover: mover el icono y el texto hacia la derecha */
+.item_btn:hover {
+  background-color: #be2c49; /* Cambio de color de fondo */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Aumentar sombra */
+  transform: translateX(4px); /* Mover el botón y el texto a la derecha */
+  color: #ffffff;
+}
+
+/* Efecto hover para el icono */
+.item_btn i {
+  margin-left: 8px; /* Espacio entre el texto y el icono */
+  transition: transform 0.3s ease;
+}
+
+.item_btn:hover i {
+  transform: translateX(3px); /* Mover el icono ligeramente a la derecha */
+}
+
+/* Efecto de clic: hacer que el botón se "hunda" */
+.item_btn:active {
+  transform: translateX(3px); /* Mantener el movimiento en el clic */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra más suave */
+}
+
+/* Efecto de enfoque (focus) para la accesibilidad */
+.item_btn:focus {
+  outline: none;
+  box-shadow: 0 0 5px rgba(167, 57, 77, 0.5); /* Resaltar el borde */
 }

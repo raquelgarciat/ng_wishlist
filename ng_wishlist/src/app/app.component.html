@@ -1,5 +1,18 @@
 <header>
-  <button (click)="lightsUp()">lights up</button>
-  <button (click)="lightsDown()">lights down</button>
+  <div class="left-side">
+    <!-- Botón Volver a inicio, visible solo cuando access es true -->
+    <button *ngIf="access" class="back-to-start" (click)="goBackToStart()">
+      <i class="fa fa-chevron-left"></i> Volver a inicio
+    </button>
+  </div>
+
+  <div class="right-side">
+    <!-- Botón de tema (sol/luna), siempre visible -->
+    <button class="theme-toggle" (click)="toggleTheme()">
+      <i class="fa" [ngClass]="isDarkMode ? 'fa-sun' : 'fa-moon'"></i>
+    </button>
+  </div>
 </header>
-<app-welcome></app-welcome>
+
+<!-- Aquí se pasa el valor de 'access' al WelcomeComponent -->
+<app-welcome [access]="access" (accessChange)="access = $event"></app-welcome>

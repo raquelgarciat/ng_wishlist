@@ -1,27 +1,62 @@
+<!-- Filtro de categorías (siempre visible) -->
+<div class="category-filter">
+  <p class="category-filter-label">Categorías:</p>
+  <!-- Contenedor para el ícono y el select -->
+  <div class="filter-wrapper">
+    <!-- Ícono de filtro de Font Awesome -->
+    <i class="fas fa-filter"></i>
+
+    <!-- Select para las categorías -->
+    <select (change)="onFilterChange()" [(ngModel)]="selectedCategory">
+      <option value="">Todas las categorías</option>
+      <option *ngFor="let category of categories" [value]="category">
+        {{ category }}
+      </option>
+    </select>
+  </div>
+</div>
+
+<!-- Filtro por país -->
+<div class="country-filter">
+  <p class="country-filter-label">País:</p>
+  <div class="filter-wrapper">
+    <!-- Ícono de filtro de Font Awesome -->
+    <i class="fas fa-flag"></i>
+
+    <!-- Select para los países -->
+    <select (change)="onFilterChange()" [(ngModel)]="selectedCountry">
+      <option value="">Todos los países</option>
+      <option *ngFor="let country of countries" [value]="country">
+        {{ country }}
+      </option>
+    </select>
+  </div>
+</div>
+
+<!-- Contenedor de las tarjetas de artículos -->
 <ul>
-  @for (item of items; track item.id) {
-  <li>
+  <li *ngFor="let item of filteredItems; trackBy: trackById">
     <div class="item_top">
       <div class="item_country">
-        @if (item.country === 'spain') {
-        <img src="/flag-es.svg" />
-        } @else if (item.country === 'japan') {
-        <img src="/flag-jp.svg" />
-        }
+        <img *ngIf="item.country === 'spain'" src="/flag-es.svg" />
+        <img *ngIf="item.country === 'japan'" src="/flag-jp.svg" />
       </div>
-      <p class="item_category">Category: {{ item.category }}</p>
+      <div class="item_category" (click)="filterByCategory(item.category)">
+        <p>Categoría:</p>
+        <p class="category-link">{{ item.category }}</p>
+      </div>
     </div>
     <div
       class="item_img"
       [style.backgroundImage]="'url(' + item.img + ')'"
     ></div>
-    <h4 class="item_name">
-      {{ item.name }}
-    </h4>
+    <h4 class="item_name">{{ item.name }}</h4>
+    <p class="item_desc">{{ item.desc }}</p>
     <div class="item_bottom">
-      <p class="item_price">{{ item.price }}€</p>
-      <a href="{{ item.itemUrl }}" class="item_btn">BUY</a>
+      <p class="item_price">{{ item.price }}</p>
+      <a href="{{ item.itemUrl }}" class="item_btn" target="_blank">
+        Comprar <i class="fas fa-shopping-cart"></i>
+      </a>
     </div>
   </li>
-  }
 </ul>

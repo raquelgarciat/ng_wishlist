@@ -1,8 +1,18 @@
-@if (access) {
-<app-items></app-items>
-<button (click)="access = false">Volver a inicio</button>
-} @else {
-<p>¡Bienvenido!</p>
-<p>Pulsa el botón para acceder a la lista ↓</p>
-<button (click)="access = true">Acceder</button>
-}
+<div *ngIf="access; else showAccessButton">
+  <app-items></app-items>
+  <!-- Muestra la wishlist -->
+</div>
+
+<ng-template #showAccessButton>
+  <div class="welcome-box">
+    <p>¡Bienvenido!</p>
+    <p class="welcome-text"></p>
+    <p class="welcome-text">
+      Pulsa el botón para acceder a la lista
+      <i class="fas fa-chevron-down caret-icon"></i>
+    </p>
+
+    <!-- Llamar a setAccess para cambiar 'access' a true y emitir el cambio -->
+    <button (click)="setAccess(true)">Acceder a la wishlist</button>
+  </div>
+</ng-template>
