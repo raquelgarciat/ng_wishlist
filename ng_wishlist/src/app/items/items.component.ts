@@ -29,7 +29,7 @@ export class ItemsComponent implements OnInit {
       itemUrl:
         'https://singularu.com/products/pendiente-suelto-sleek-plata-oro',
       img: 'https://singularu.com/cdn/shop/files/ZPSSLEE925A00XX.jpg?crop=center&height=1309&v=1726586193&width=984',
-      category: 'joyería',
+      category: 'accesorios',
       price: '7.99€',
       country: 'spain',
       desc: 'Pendiente suelto en oro, solo 1, no el par.',
@@ -40,7 +40,7 @@ export class ItemsComponent implements OnInit {
       itemUrl:
         'https://singularu.com/products/pendiente-suelto-mini-moon-spark-oro',
       img: 'https://singularu.com/cdn/shop/products/ZPSMMOS925A00XX_9604af61-59ee-468a-9ab4-f66e452d5de6.jpg?crop=center&height=655&v=1670601903&width=492',
-      category: 'joyería',
+      category: 'accesorios',
       price: '15.99€',
       country: 'spain',
       desc: 'Pendiente suelto en oro, solo 1, no el par.',
@@ -167,10 +167,164 @@ export class ItemsComponent implements OnInit {
       itemUrl:
         'https://item.rakuten.co.jp/honeys-online/6190139492/?l-id=shoptop_widget_item_list',
       img: 'https://image.rakuten.co.jp/honeys-online/cabinet/goods/6190139492/6190139492.jpg',
-      category: 'hogar',
+      category: 'ropa',
       price: '1780yen',
       country: 'japan',
-      desc: 'Camiseta talla M o L, motivo Hachiware o Momonga. Chiikawa ya la tengo, y Usagi no la quiero.',
+      desc: 'Camiseta talla M o L, motivo Hachiware (azul) o Momonga (lila). Chiikawa ya la tengo, y Usagi no la quiero. Hay que pedirla via Buyee, es tienda de Rakuten.',
+    },
+
+    {
+      id: 14,
+      name: 'Caja de sobres de cartas Ave Mujica x MyGO',
+      itemUrl:
+        'https://www.board-game.co.uk/product/weiss-schwarz-booster-box-mygo-x-ave-mujica/',
+      img: 'https://toysonejapan.com/cdn/shop/files/2025-02-13T142328.084_489x489.jpg?v=1739424229',
+      category: 'juegos',
+      price: '£38.69',
+      country: 'uk',
+      desc: 'Caja con 12 sobres de cartas de MyGO x Ave Mujica. A la venta el 18 de julio. Vienen de UK, pero envían rápido y sin aduanas.',
+    },
+
+    {
+      id: 15,
+      name: 'Sobre de cartas Ave Mujica x MyGO',
+      itemUrl:
+        'https://www.board-game.co.uk/product/weiss-schwarz-booster-pack-mygo-x-ave-mujica/',
+      img: 'https://www.japan2uk.com/cdn/shop/files/Weiss_Schwarz_BanG_Dream_MyGO_x_Ave_Mujica_Japanese_Booster_Pack_700x700.png?v=1744281929',
+      category: 'juegos',
+      price: '£3.39',
+      country: 'uk',
+      desc: '1 sobre de cartas de MyGO x Ave Mujica. A la venta el 18 de julio. Viene de UK, pero envían rápido y sin aduanas.',
+    },
+    {
+      id: 16,
+      name: 'Mazo de cartas Ave Mujica',
+      itemUrl:
+        'https://www.board-game.co.uk/product/weiss-schwarz-trial-deck-bang-dream-ave-mujica/',
+      img: 'https://i.ebayimg.com/images/g/ks8AAOSwIpJnh648/s-l1200.jpg',
+      category: 'juegos',
+      price: '£13.69',
+      country: 'uk',
+      desc: 'Mazo preconstruido de cartas de Ave Mujica. A la venta el 18 de julio. Viene de UK, pero envían rápido y sin aduanas.',
+    },
+
+    {
+      id: 17,
+      name: 'Camiseta Hachiware / Momonga / Chiikawa',
+      itemUrl:
+        'https://item.rakuten.co.jp/honeys-online/6190139493/?s-id=pc_shop_recommend&rtg=9841a2121bb4ca4f1a9388343983d54e',
+      img: 'https://image.rakuten.co.jp/honeys-online/cabinet/goods/6190139493/6190139493.jpg',
+      category: 'ropa',
+      price: '1780yen',
+      country: 'japan',
+      desc: 'Camiseta talla M o L, motivo Hachiware (azul), Chiikawa (rosa) o Momonga (gris). Usagi no la quiero. Hay que pedirla via Buyee, es tienda de Rakuten.',
+    },
+
+    {
+      id: 18,
+      name: 'Sudadera Momonga / Chiikawa',
+      itemUrl:
+        'https://item.rakuten.co.jp/honeys-online/6190119132/?s-id=pc_shop_recommend&rtg=9841a2121bb4ca4f1a9388343983d54e',
+      img: 'https://image.rakuten.co.jp/honeys-online/cabinet/goods/6190119132/6190119132.jpg',
+      category: 'ropa',
+      price: '2480yen',
+      country: 'japan',
+      desc: 'Sudadera talla M o L, motivo Chiikawa (rosa) o Momonga (lila). Hachiware ya la tengo, y Usagi no la quiero. Hay que pedirla via Buyee, es tienda de Rakuten.',
+    },
+
+    {
+      id: 19,
+      name: 'Peluche charm evil Momonga',
+      itemUrl:
+        'https://chiikawamarket.jp/en/collections/magicalchiikawa/products/4571609356639',
+      img: 'https://chiikawamarket.jp/cdn/shop/files/4571609356639_1.jpg?v=1747737404&width=493',
+      category: 'accesorios',
+      price: '1870yen',
+      country: 'japan',
+      desc: 'El único peluche de Momonga sin cara de mala persona! Se puede comprar directo en la tienda de Chiikawa, sale el carrito de WorldShopping para compras internacionales cuando entras.',
+    },
+
+    {
+      id: 20,
+      name: 'Camiseta Tokyo Chiikawa',
+      itemUrl:
+        'https://chiikawamarket.jp/en/collections/apparel/products/4570189193511',
+      img: 'https://chiikawamarket.jp/cdn/shop/files/4570189193511_1.jpg?v=1745389184&width=493',
+      category: 'ropa',
+      price: '3190yen',
+      country: 'japan',
+      desc: 'Talla L o XL. Se agotará, pero realmente me vale cualquier cosa de esa tienda. Se puede comprar directo, sale el carrito de WorldShopping para compras internacionales cuando entras.',
+    },
+
+    {
+      id: 21,
+      name: 'Camiseta Magical Chiikawa',
+      itemUrl:
+        'https://chiikawamarket.jp/en/collections/apparel/products/4570189195195?_pos=4&_fid=5160016fe&_ss=c&variant=46149759205617',
+      img: 'https://chiikawamarket.jp/cdn/shop/files/4570189195195_1.jpg?v=1747730490&width=493',
+      category: 'ropa',
+      price: '3190yen',
+      country: 'japan',
+      desc: 'Talla L o XL. Se agotará, pero realmente me vale cualquier cosa de esa tienda. Se puede comprar directo, sale el carrito de WorldShopping para compras internacionales cuando entras.',
+    },
+
+    {
+      id: 22,
+      name: 'Peluche charm magical Momonga',
+      itemUrl:
+        'https://chiikawamarket.jp/en/collections/nuigurumi-mascot/products/4582662958524?_pos=32&_fid=6aa00b300&_ss=c',
+      img: 'https://chiikawamarket.jp/cdn/shop/files/4582662958524_1.jpg?v=1721616448&width=493',
+      category: 'accesorios',
+      price: '1870yen',
+      country: 'japan',
+      desc: 'Peluche de Momonga con cara de mala persona. Se puede comprar directo en la tienda de Chiikawa, sale el carrito de WorldShopping para compras internacionales cuando entras.',
+    },
+
+    {
+      id: 23,
+      name: 'Peluche charm Kurimanju',
+      itemUrl:
+        'https://chiikawamarket.jp/en/collections/nuigurumi-mascot/products/4582662919471?_pos=53&_fid=cb27b0ee7&_ss=c',
+      img: 'https://chiikawamarket.jp/cdn/shop/files/4582662919471_1.jpg?v=1709014211&width=493',
+      category: 'accesorios',
+      price: '1870yen',
+      country: 'japan',
+      desc: 'Tiene esa cara porque se acaba de tomar una cerveza y le ha sentado fenomenal. Se puede comprar directo en la tienda de Chiikawa, sale el carrito de WorldShopping para compras internacionales cuando entras.',
+    },
+
+    {
+      id: 24,
+      name: 'Peluche charm Magical Momonga (Power-Up)',
+      itemUrl: 'https://chiikawamarket.jp/en/products/4582662970465',
+      img: 'https://chiikawamarket.jp/cdn/shop/files/4582662970465_1.jpg?v=1693909659&width=493',
+      category: 'accesorios',
+      price: '1760yen',
+      country: 'japan',
+      desc: 'Peluche de Momonga con cara de satisfacción malvada. Se puede comprar directo en la tienda de Chiikawa, sale el carrito de WorldShopping para compras internacionales cuando entras.',
+    },
+
+    {
+      id: 25,
+      name: 'Peluche charm Umigame Hachiware',
+      itemUrl:
+        'https://chiikawamarket.jp/en/collections/nuigurumi-mascot/products/4582662929241?_pos=81&_fid=cb27b0ee7&_ss=c',
+      img: 'https://chiikawamarket.jp/cdn/shop/files/4582662929241_1.jpg?v=1687318260&width=493',
+      category: 'accesorios',
+      price: '1650yen',
+      country: 'japan',
+      desc: 'Es Hachiware vestido de tortuga, no se puede pedir más a la vida. Se puede comprar directo en la tienda de Chiikawa, sale el carrito de WorldShopping para compras internacionales cuando entras.',
+    },
+
+    {
+      id: 25,
+      name: 'Peluche charm Shisa',
+      itemUrl:
+        'https://chiikawamarket.jp/en/collections/nuigurumi-mascot/products/4582662919921?_pos=94&_fid=cb27b0ee7&_ss=c',
+      img: 'https://chiikawamarket.jp/cdn/shop/products/4582662919921_1.jpg?v=1665977545&width=493',
+      category: 'accesorios',
+      price: '1320yen',
+      country: 'japan',
+      desc: 'Peluche del tenaz cocinero Shisa. Se puede comprar directo en la tienda de Chiikawa, sale el carrito de WorldShopping para compras internacionales cuando entras.',
     },
   ];
 
